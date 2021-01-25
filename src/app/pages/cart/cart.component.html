@@ -1,0 +1,38 @@
+<h3>Cart</h3>
+
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
+
+<p>
+  <nz-tag class="cart-item" *ngFor="let item of items">
+      {{ item.name }} -
+      {{ item.price | currency }}
+  </nz-tag>
+</p>
+
+<form nz-form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+  <nz-form-item>
+    <nz-form-label nzRequired for="name">
+      Name
+    </nz-form-label>
+    <nz-form-control>
+      <input nz-input id="name" type="text" formControlName="name">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label nzRequired for="address">
+      Address
+    </nz-form-label>
+    <nz-form-control>
+      <input nz-input id="address" type="text" formControlName="address">
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item nz-row class="register-area">
+    <nz-form-control>
+      <button nz-button nzType="primary" class="button" type="submit">Purchase</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

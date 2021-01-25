@@ -1,0 +1,11 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product">
+  <h3>{{ product.name }}</h3>
+  <nz-divider></nz-divider>
+  <h4>{{ product.price | currency }}</h4>
+  <nz-divider></nz-divider>
+  <p>{{ product.description }}</p>
+  <nz-divider></nz-divider>
+  <button nz-button nzType="primary" (click)="addToCart(product)">Buy</button>
+</div>

@@ -1,0 +1,29 @@
+<h2>Products</h2>
+
+
+<div *ngFor="let product of products">
+
+  <nz-card style="width:300px;" nzTitle="Card title" [nzExtra]="extraTemplate">
+    <h3>
+      <a [title]="product.name + ' details'" [routerLink]="['/product-list/product', product.id]">
+        {{ product.name }}
+      </a>
+    </h3>
+
+    <p *ngIf="product.description">
+      Description: {{ product.description }}
+    </p>
+
+    <app-product-alert
+      [product]="product"
+      (notify)="onNotify()">
+    </app-product-alert>
+  </nz-card>
+
+  <ng-template #extraTemplate>
+    <button nz-button nzType="primary" (click)="share(product.name)">
+      Share
+    </button>
+  </ng-template>
+</div>
+
