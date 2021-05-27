@@ -10,6 +10,8 @@ import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzTagModule } from 'ng-zorro-antd/tag';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+
 
 @NgModule({
   exports: [
@@ -22,7 +24,8 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     NzAlertModule,
     NzDividerModule,
     NzTagModule,
-    NzInputModule
+    NzInputModule,
+    NzGridModule
   ],
 })
 export class NgZorroAntdModule {};

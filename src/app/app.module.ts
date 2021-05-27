@@ -11,10 +11,11 @@ import { AppComponent } from './app.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { ShippingComponent } from './pages/shipping/shipping.component'
 
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { zh_CN } from 'ng-zorro-antd/i18n';
 import { IconsProviderModule } from './icons-provider.module';
-import { NgZorroAntdModule } from './ng-zorro-antd.module';
+// import { NgZorroAntdModule } from './ng-zorro-antd.module';
 
 registerLocaleData(zh);
 @NgModule({
